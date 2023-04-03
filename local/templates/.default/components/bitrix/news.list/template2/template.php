@@ -18,7 +18,7 @@ $this->setFrameMode(true);
         $unixDate = MakeTimeStamp($arItem["TIMESTAMP_X"], "DD.MM.YYYY HH:MI:SS");
 
         if ($key === 0) { ?>
-          <article class="news-important" style="background-image: url(<?php echo $arItem; ?>)">
+          <article class="news-important" style="background-image: url(<?php echo $arItem["PREVIEW_PICTURE"]["SRC"]; ?>)">
             <a href="/article.html" class="news-important__link">
               <h2 class="news-important__title">
                   <?php echo !empty($arItem["PREVIEW_TEXT"]) ? $arItem["PREVIEW_TEXT"] : $arItem["NAME"] ?>
